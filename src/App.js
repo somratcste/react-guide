@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import ReactStyle from './components/ReactStyle/ReactStyle';
 import AddUser from './components/Users/AddUser';
+import UserList from './components/Users/UserList';
 
 const App = () => {
     return (
@@ -10,6 +11,7 @@ const App = () => {
             {/* <ReactStyle /> */}
 
             <AddUser />
+            <UserList users={[]} />
         </div>
     );
 };
