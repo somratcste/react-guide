@@ -49,7 +49,8 @@ const AddUser = props => {
                     title={error.title} 
                     message={error.message} 
                     onConfirm={errorHandler} 
-                />}
+                />
+            }
             <Card className={classes.input}>
                 <form onSubmit={addUserHandler}>
                     <label htmlFor="username">Username</label>
