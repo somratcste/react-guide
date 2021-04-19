@@ -7,13 +7,13 @@ import UserList from './components/Users/UserList';
 
 const App = () => {
     return (
-        <div>
+        <>
             {/* Practise React Style */}
             {/* <ReactStyle /> */}
 
             {/* Practise React Error and Validation */}
             <ReactError />
-        </div>
+        </>
     );
 };
 
