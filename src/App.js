@@ -12,7 +12,7 @@ const App = () => {
             {/* <ReactStyle /> */}
 
             {/* Practise React Error and Validation */}
-            <ReactError />
+            {/* <ReactError /> */}
         </>
     );
 };
