@@ -25,6 +25,7 @@ const passwordReducer = (state, action) => {
 }
 
 const Login = (props) => {
+    // array destructuring
     // const [enteredEmail, setEnteredEmail] = useState('');
     // const [emailIsValid, setEmailIsValid] = useState('');
     // const [enteredPassword, setEnteredPassword] = useState('');
@@ -41,6 +42,7 @@ const Login = (props) => {
         isValid: null
     });
 
+    // object destructuring 
     const {isValid: emailIsValid} = emailState;
     const {isValid: passwordIsValid} = passwordState;
 
