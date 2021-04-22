@@ -7,6 +7,7 @@ import ReactError from './components/ReactError/ReactError';
 import ReactStyle from './components/ReactStyle/ReactStyle';
 import AddUser from './components/Users/AddUser';
 import UserList from './components/Users/UserList';
+import AuthContext from './components/store/AuthContext';
 
 const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -39,11 +40,17 @@ const App = () => {
             {/* <ReactError /> */}
 
             {/* Practise Handling side effects, reducers and context API  */}
-            <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
-            <main>
-                {!isLoggedIn && <Login onLogin={loginHandler} />}
-                {isLoggedIn && <Home onLogout={logoutHandler} />}
-            </main>
+            <AuthContext.Provider
+                value={{
+                    isLoggedIn: isLoggedIn
+                }}
+            >
+                <MainHeader onLogout={logoutHandler} />
+                <main>
+                    {!isLoggedIn && <Login onLogin={loginHandler} />}
+                    {isLoggedIn && <Home onLogout={logoutHandler} />}
+                </main>
+            </AuthContext.Provider>
         </>
     );
 };
