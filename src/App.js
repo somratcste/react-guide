@@ -8,6 +8,7 @@ import ReactStyle from './components/ReactStyle/ReactStyle';
 import AddUser from './components/Users/AddUser';
 import UserList from './components/Users/UserList';
 import AuthContext from './components/store/AuthContext';
+import ReactHook from './components/ReactHook/ReactHook';
 
 const App = () => {
     const ctx = useContext(AuthContext);
@@ -20,12 +21,7 @@ const App = () => {
             {/* <ReactError /> */}
 
             {/* Practise Handling side effects, reducers and context API  */}
-            
-            <MainHeader />
-            <main>
-                {!ctx.isLoggedIn && <Login />}
-                {ctx.isLoggedIn && <Home />}
-            </main>
+            {/* <ReactHook /> */}
         </>
     );
 };
