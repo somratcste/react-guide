@@ -10,6 +10,7 @@ import UserList from './components/Users/UserList';
 import AuthContext from './components/store/AuthContext';
 import ReactHook from './components/ReactHook/ReactHook';
 import Header from './components/Layout/Header';
+import Meals from './components/Meals/Meals';
 
 const App = () => {
     const ctx = useContext(AuthContext);
@@ -26,6 +27,9 @@ const App = () => {
 
             {/* Food Order App */}
             <Header />
+            <main>
+                <Meals />
+            </main>
         </>
     );
 };
