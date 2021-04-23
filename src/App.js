@@ -9,6 +9,7 @@ import AddUser from './components/Users/AddUser';
 import UserList from './components/Users/UserList';
 import AuthContext from './components/store/AuthContext';
 import ReactHook from './components/ReactHook/ReactHook';
+import Header from './components/Layout/Header';
 
 const App = () => {
     const ctx = useContext(AuthContext);
@@ -22,6 +23,9 @@ const App = () => {
 
             {/* Practise Handling side effects, reducers and context API  */}
             {/* <ReactHook /> */}
+
+            {/* Food Order App */}
+            <Header />
         </>
     );
 };
