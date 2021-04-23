@@ -11,6 +11,7 @@ import AuthContext from './components/store/AuthContext';
 import ReactHook from './components/ReactHook/ReactHook';
 import Header from './components/Layout/Header';
 import Meals from './components/Meals/Meals';
+import Cart from './components/Cart/Cart';
 
 const App = () => {
     const ctx = useContext(AuthContext);
@@ -26,6 +27,7 @@ const App = () => {
             {/* <ReactHook /> */}
 
             {/* Food Order App */}
+            <Cart />
             <Header />
             <main>
                 <Meals />
