@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './App.css';
 import MainHeader from './components/MainHeader/MainHeader';
 import Login from './components/Login/Login';
@@ -14,7 +14,16 @@ import Meals from './components/Meals/Meals';
 import Cart from './components/Cart/Cart';
 
 const App = () => {
-    const ctx = useContext(AuthContext);
+    const [cartIsShown, setCartIsShown] = useState(false);
+
+    const showCartHandler = () => {
+        setCartIsShown(true)
+    }
+
+    const hideCartHandleer = () => {
+        setCartIsShown(false)
+    }
+
     return (
         <>
             {/* Practise React Style */}
@@ -27,8 +36,8 @@ const App = () => {
             {/* <ReactHook /> */}
 
             {/* Food Order App */}
-            <Cart />
-            <Header />
+            {cartIsShown && <Cart onClose={hideCartHandleer} />}
+            <Header onShowCart={showCartHandler} />
             <main>
                 <Meals />
             </main>
